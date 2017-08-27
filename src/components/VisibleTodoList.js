@@ -1,7 +1,8 @@
-import React, { Component } from 'react'
+import React from 'react'
 import TodoList from './TodoList'
+import { Consumer } from '../lib/react-redux'
 
-class VisibleTodoList extends Component {
+class VisibleTodoList extends Consumer {
   getVisibleTodos(todos, filter) {
     switch (filter) {
       case 'SHOW_ALL':
@@ -15,20 +16,8 @@ class VisibleTodoList extends Component {
     }
   }
 
-  componentDidMount() {
-    const { store } = this.props
-    this.unsubscribe = store.subscribe(() => 
-      this.forceUpdate()
-    )
-  }
-
-  componentWillUnmount() {
-    this.unsubscribe()
-  }
-
   render() {
-    const props = this.props
-    const { store } = props
+    const store = this.store
     const state = store.getState()
 
     return (

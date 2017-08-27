@@ -1,21 +1,11 @@
-import React, { Component } from 'react'
+import React from 'react'
 import Link from './Link'
+import { Consumer } from '../lib/react-redux'
 
-class FilterLink extends Component {
-  componentDidMount() {
-    const { store } = this.props
-    this.unsubscribe = store.subscribe(() => 
-      this.forceUpdate()
-    )
-  }
-
-  componentWillUnmount() {
-    this.unsubscribe()
-  }
-
+class FilterLink extends Consumer {
   render() {
     const props = this.props
-    const { store } = props
+    const store = this.store
     const state = store.getState()
 
     return (
