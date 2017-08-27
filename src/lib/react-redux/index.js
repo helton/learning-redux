@@ -1,4 +1,4 @@
 import Provider from './Provider'
-import connect from './connect'
+import { connect } from './react-redux'
 export { Provider, connect }
 // export * from 'react-redux'

@@ -1,7 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 
-const connect = (mapStateToProps, mapDispatchToProps) =>
+export const connect = (mapStateToProps, mapDispatchToProps) =>
   Component => class extends React.Component {
     static contextTypes = {
       store: PropTypes.object
@@ -45,4 +45,3 @@ const connect = (mapStateToProps, mapDispatchToProps) =>
     }
   }
 
-export default connect
