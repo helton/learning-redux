@@ -21,12 +21,12 @@ li {
   cursor: pointer;
 }
 
-ul ~ p > a,
-ul ~ p > span {
+.link {
   display: inline-block;
   margin: 5px;
 }
 
-ul ~ p > span {
-  font-weight: bold;
+.active-link {
+  text-decoration: none;
+  color: black;
 }
