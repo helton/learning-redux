@@ -3,12 +3,11 @@
 
 This TodoApp project was based on those *excelent* Egghead courses (made by [Dan Abramov](https://github.com/gaearon)):
 
-- [Getting Started with Redux](https://egghead.io/courses/getting-started-with-redux).
-![](./getting-started-with-redux-logo.png)
+- [Getting Started with Redux](https://egghead.io/courses/getting-started-with-redux)
+<img src="getting-started-with-redux-logo.png" width="300"/>
 
-
-- [Building React Applications with Idiomatic Redux](https://egghead.io/courses/building-react-applications-with-idiomatic-redux).
-![](./building-react-applications-with-idiomatic-redux-logo.png)
+- [Building React Applications with Idiomatic Redux](https://egghead.io/courses/building-react-applications-with-idiomatic-redux)
+<img src="building-react-applications-with-idiomatic-redux-logo.png" width="300"/>
 
 If you haven't watched them, what are you waiting for? Go check them out!
 
