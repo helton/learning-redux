@@ -1,13 +1,19 @@
 import React from 'react'
 
-const AddTodo = ({ onAddClick }) => {
+const AddTodo = ({ store }) => {
+  let nextId = 0
   let input
 
   return (
     <div> 
-      <input type="text" ref={node => input = node} placeholder="type your todo here"/>
+      <input type="text" placeholder="type your todo here"
+        ref={node => input = node}/>
       <button onClick={() => {
-          onAddClick(input.value)
+          store.dispatch({
+            type: 'ADD_TODO',
+            id: nextId++,
+            text: input.value
+          })
           input.value = ''
           input.focus()
         }}>

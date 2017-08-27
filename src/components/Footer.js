@@ -1,25 +1,22 @@
 import React from 'react'
 import FilterLink from './FilterLink'
 
-const Footer = ({ visibilityFilter, onFilterClick }) =>
+const Footer = ({ store }) =>
   <p>
     Show:
     <FilterLink
       filter={'SHOW_ALL'}
-      visibilityFilter={visibilityFilter}
-      onClick={onFilterClick}>
+      store={store}>
       All
     </FilterLink>
     <FilterLink
       filter={'SHOW_ACTIVE'}
-      visibilityFilter={visibilityFilter}
-      onClick={onFilterClick}>
+      store={store}>
       Active
     </FilterLink>
     <FilterLink
       filter={'SHOW_COMPLETED'}
-      visibilityFilter={visibilityFilter}
-      onClick={onFilterClick}>
+      store={store}>
       Completed
     </FilterLink>
   </p>
