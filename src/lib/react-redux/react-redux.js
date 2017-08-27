@@ -1,5 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
+import { mapValues } from 'lodash'
+import { compose } from 'rambda'
 
 export const connect = (mapStateToProps, mapDispatchToProps) =>
   Component => class extends React.Component {
@@ -30,12 +32,24 @@ export const connect = (mapStateToProps, mapDispatchToProps) =>
       return this.context.store
     }
 
-    render() {
+    getStateToProps(mapStateToProps) {
       const stateToProps = mapStateToProps || (() => ({}))
+      return stateToProps(this.store.getState(), this.props)
+    }
+
+    getDispatchToProps(mapDispatchToProps) {
       const dispatchToProps = mapDispatchToProps || (dispatch => ({ dispatch }))
+      const dispatch = this.store.dispatch.bind(this.store)
+      if (typeof dispatchToProps === 'function')
+        return dispatchToProps(dispatch, this.props)
+      else
+        return mapValues(dispatchToProps, value => compose(dispatch, value))
+    }
+
+    render() {
       const props = { 
-        ...stateToProps(this.store.getState(), this.props), 
-        ...dispatchToProps(this.store.dispatch.bind(this.store), this.props)
+        ...this.getStateToProps(mapStateToProps), 
+        ...this.getDispatchToProps(mapDispatchToProps)
       }
       return (
         <Component {...props}>
