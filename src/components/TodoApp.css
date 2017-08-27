@@ -1,0 +1,32 @@
+.todo-app {
+  margin: 10px auto;
+  text-align: center;
+  font-size: 30px;
+}
+
+.todo-app input[type=text] {
+  width: 200px;
+}
+
+.completed {
+  text-decoration: line-through;
+  opacity: 0.3;
+}
+
+ul {
+  list-style-type: none;
+}
+
+li {
+  cursor: pointer;
+}
+
+ul ~ p > a,
+ul ~ p > span {
+  display: inline-block;
+  margin: 5px;
+}
+
+ul ~ p > span {
+  font-weight: bold;
+}
