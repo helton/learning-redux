@@ -1,5 +1,5 @@
 import deepFreeze from "deep-freeze";
-import { todos } from "./reducers";
+import { todos } from "./index";
 
 describe('todo reducer', () => {
   it("should add todo successfully without mutate the original object", () => {

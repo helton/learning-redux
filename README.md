@@ -1,9 +1,17 @@
-# Getting Started with Redux
+# Getting Started with Redux +
+# Building React Applications with Idiomatic Redux
 
-> This TodoApp project was based on [Dan Abramov course available on Egghead](https://egghead.io/courses/getting-started-with-redux).
-If you haven't watched it, what are you waiting for? Go check it out!
+This TodoApp project was based on those *excelent* Egghead courses (made by [Dan Abramov](https://github.com/gaearon)):
 
+- [Getting Started with Redux](https://egghead.io/courses/getting-started-with-redux).
 ![](./getting-started-with-redux-logo.png)
+
+
+- [Building React Applications with Idiomatic Redux](https://egghead.io/courses/building-react-applications-with-idiomatic-redux).
+![](./building-react-applications-with-idiomatic-redux-logo.png)
+
+If you haven't watched them, what are you waiting for? Go check them out!
+
 
 ## Usage
 

@@ -1,6 +1,6 @@
 import Store from './Store'
 
-export const createStore = reducer => new Store(reducer)
+export const createStore = (reducer, initialState) => new Store(reducer, initialState)
 
 export const combineReducers = reducers =>
   (state = {}, action) => {
