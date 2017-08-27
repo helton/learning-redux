@@ -1,4 +1,4 @@
 import Provider from './Provider'
-import Consumer from './Consumer'
-
-export { Provider, Consumer }
+import connect from './connect'
+export { Provider, connect }
+// export * from 'react-redux'

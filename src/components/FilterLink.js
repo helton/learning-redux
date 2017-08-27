@@ -1,27 +1,14 @@
-import React from 'react'
 import Link from './Link'
-import { Consumer } from '../lib/react-redux'
+import { connect } from '../lib/react-redux'
+import { setVisibilityFilter } from '../actions'
 
-class FilterLink extends Consumer {
-  render() {
-    const props = this.props
-    const store = this.store
-    const state = store.getState()
+const mapStateToProps = (state, ownProps) => ({
+  active: ownProps.filter === state.visibilityFilter
+})
 
-    return (
-      <Link 
-        active={props.filter === state.visibilityFilter}
-        onClick={() =>
-          store.dispatch({
-            type: 'SET_VISIBILITY_FILTER',
-            filter: props.filter
-          })
-        }
-      >
-        {props.children}
-      </Link>
-    )
-  }
-}
+const mapDispatchToProps = (dispatch, ownProps) => ({
+  onClick: () =>
+    dispatch(setVisibilityFilter(ownProps.filter))
+})
 
-export default FilterLink
+export default connect(mapStateToProps, mapDispatchToProps)(Link)

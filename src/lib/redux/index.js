@@ -1,8 +1,8 @@
 import Store from './Store'
 
-export const createStore = reducer => new Store(reducer)
+const createStore = (reducer, enhancer) => new Store(reducer)
 
-export const combineReducers = reducers =>
+const combineReducers = reducers =>
   (state = {}, action) => {
     return Object.keys(reducers).reduce(
       (nextState, key) => {
@@ -12,3 +12,6 @@ export const combineReducers = reducers =>
       {}
     )
   }
+
+export { createStore, combineReducers }
+// export * from 'redux'

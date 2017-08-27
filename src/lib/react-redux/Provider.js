@@ -1,7 +1,7 @@
 import { Component } from 'react'
 import PropTypes from 'prop-types'
 
-export default class Provider extends Component {
+class Provider extends Component {
   static childContextTypes = {
     store: PropTypes.object
   }
@@ -16,3 +16,5 @@ export default class Provider extends Component {
     return this.props.children
   }
 }
+
+export default Provider
