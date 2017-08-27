@@ -3,7 +3,7 @@ import FilterLink from './FilterLink'
 
 const Footer = () =>
   <p>
-    Show:
+    <strong>Show:</strong>
     <FilterLink filter={'all'}>
       All
     </FilterLink>
