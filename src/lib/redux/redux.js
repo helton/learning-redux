@@ -1,4 +1,4 @@
-import { mapValues } from 'lodash'
+import mapValues from 'lodash/mapValues'
 import Store from './Store'
 
 export const createStore = (reducer, initialState) => new Store(reducer, initialState)

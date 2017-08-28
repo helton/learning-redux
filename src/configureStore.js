@@ -23,10 +23,20 @@ const configureStore = () => {
       return returnValue
     }
   }
+
+  const addPromiseSupportToDispatch = store => {
+    const rawDispatch = store.dispatch.bind(this)
+    return async action => {
+      const actionValue = typeof action.then === 'function' ? await action : action
+      return rawDispatch(actionValue)
+    }
+  }
   
   if (process.env.NODE_ENV !== 'production') {
     store.dispatch = addLoggingToDispatch(store)
   }
+
+  store.dispatch = addPromiseSupportToDispatch(store)
 
   return store
 }

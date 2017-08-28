@@ -1,6 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import { mapValues } from 'lodash'
+import mapValues from 'lodash/mapValues'
 
 export const connect = (mapStateToProps, mapDispatchToProps) =>
   Component => class extends React.Component {
