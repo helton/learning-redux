@@ -1,7 +1,7 @@
 import throttle from 'lodash/throttle'
 import { createStore } from './lib/redux'
 import { loadState, saveState } from './lib/localStorage'
-import { todoApp } from './reducers' 
+import todoApp from './reducers' 
 
 const configureStore = () => {
   const KEY = 'todo-app'
