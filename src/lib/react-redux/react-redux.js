@@ -1,7 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import { mapValues } from 'lodash'
-import { compose } from 'rambda'
 
 export const connect = (mapStateToProps, mapDispatchToProps) =>
   Component => class extends React.Component {
@@ -43,7 +42,7 @@ export const connect = (mapStateToProps, mapDispatchToProps) =>
       if (typeof dispatchToProps === 'function')
         return dispatchToProps(dispatch, this.props)
       else
-        return mapValues(dispatchToProps, value => compose(dispatch, value))
+        return mapValues(dispatchToProps, fn => (...args) => dispatch(fn(...args)))
     }
 
     render() {
