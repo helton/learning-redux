@@ -1,8 +1,8 @@
 export default class Store {
-  constructor(reducer, initialState) {
+  constructor(reducer, preloadedState) {
     this.reducer = reducer
     this.observers = []
-    this.state = initialState
+    this.state = preloadedState
     this.dispatch({})
   }
 

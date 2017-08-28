@@ -26,6 +26,8 @@ I added the `redux` and `react-redux` dependencies in the project but I'm not us
 Now I've a basic `redux` and `react-redux` implementation working!
 
 The only problem I faced with this approach was that I'm not able to connect to the **Redux Dev Tools** anymore. I think it's because it's tightly coupled to the original Redux implementation. Maybe I'll come back and fix it.
+It was supposed to work if you pass this enhancer `window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()` to the `createStore()` method.
+For more information, take a look at: https://github.com/zalmoxisus/redux-devtools-extension#12-advanced-store-setup
 
 If you intend to use the original `redux` and `react-redux` implementations, go to the `index.js` files under the `lib` folder and export the original functions/symbols of those libraries.
 
