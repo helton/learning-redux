@@ -1,0 +1,32 @@
+{
+  "todos": {
+    "byId": {
+      "1": {
+        "id": "1",
+        "text": "what",
+        "completed": false
+      },
+      "2": {
+        "id": "2",
+        "text": "the",
+        "completed": true
+      },
+      "3": {
+        "id": "3",
+        "text": "heck",
+        "completed": false
+      },
+      "4": {
+        "id": "4",
+        "text": "is",
+        "completed": true
+      },
+      "5": {
+        "id": "5",
+        "text": "this",
+        "completed": false
+      }
+    },
+    "allIds": ["1", "2", "3", "4", "5"]
+  }
+}

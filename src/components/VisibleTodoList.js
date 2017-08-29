@@ -7,7 +7,7 @@ import { getVisibleTodos } from '../reducers'
 
 class VisibleTodoList extends Component {
   componentDidMount() {
-    this.fetchData() 
+    this.fetchData()
   }
 
   componentDidUpdate(prevProps) {
