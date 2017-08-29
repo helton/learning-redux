@@ -1,5 +1,5 @@
-const promise = store => 
+const promiseMiddleware = store => 
   next => 
     async action => next(typeof action.then === 'function' ? await action : action)
 
-export default promise
+export default promiseMiddleware

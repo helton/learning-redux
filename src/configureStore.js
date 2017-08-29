@@ -1,5 +1,5 @@
 import { createStore, applyMiddleware } from './lib/redux'
-import createLogger from './lib/redux-logger'
+import { createLogger } from './lib/redux-logger'
 import promise from './lib/redux-promise'
 import todoApp from './reducers' 
 

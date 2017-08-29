@@ -1,6 +1,6 @@
 import moment from 'moment'
 
-const createLogger = (options = {}) => store => next => {
+export const createLogger = (options = {}) => store => next => {
   if (!console.group) {
     return next
   }
@@ -30,5 +30,3 @@ const createLogger = (options = {}) => store => next => {
     return returnValue
   }
 }
-
-export default createLogger

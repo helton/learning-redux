@@ -17,7 +17,7 @@ export const connect = (mapStateToProps, mapDispatchToProps) =>
       this.shouldSubscribe = mapStateToProps !== null
     }
 
-    componentDidMount() {
+    componentWillMount() {
       if (this.shouldSubscribe)
         this.unsubscribe = this.store.subscribe(() => this.forceUpdate())
     }
