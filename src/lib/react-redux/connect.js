@@ -2,7 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import mapValues from 'lodash/mapValues'
 
-export const connect = (mapStateToProps, mapDispatchToProps) =>
+const connect = (mapStateToProps, mapDispatchToProps) =>
   Component => class extends React.Component {
     static contextTypes = {
       store: PropTypes.object
@@ -57,3 +57,5 @@ export const connect = (mapStateToProps, mapDispatchToProps) =>
       )
     }
   }
+
+export default connect
