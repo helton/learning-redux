@@ -23,7 +23,13 @@ const delay = ms =>
   new Promise(resolve => setTimeout(resolve, ms))
 
 export const fetchTodos = filter =>
-  delay(5000).then(() => {
+  delay(500).then(() => {
+
+    //just to simulate network request errors :D
+    if (Math.random() > 0.5) {
+      throw new Error('Network error')
+    }
+    
     switch (filter) {
       case 'all':
         return fakeDatabase.todos
