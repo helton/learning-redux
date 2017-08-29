@@ -6,21 +6,21 @@ export default class Store {
     this.dispatch({})
   }
 
-  getState() {
+  getState = () => {
     return this.state
-  }
+  };
 
-  dispatch(action) {
+  dispatch = action => {
     this.state = this.reducer(this.state, action)
     this.observers.forEach(observer => observer())
-  }
+  };
 
-  subscribe(observer) {
+  subscribe = observer => {
     this.observers.push(observer)
     return () => {
       this.observers = this.observers.filter(current =>
         current !== observer
       )
     }
-  }
+  };
 }

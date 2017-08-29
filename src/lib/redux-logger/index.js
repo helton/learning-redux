@@ -21,7 +21,11 @@ export const createLogger = (options = {}) => store => next => {
 
     const applyStyle = customStyle => `${customStyle}; font-weight: bold`
 
-    console.group(title)
+    if (options.collapsed && options.collapsed(store.getState, action)) {
+      console.groupCollapsed(title)
+    } else {
+      console.group(title)
+    }
     console.log('%cprev state', applyStyle('color: grey'), previousState)
     console.log('%caction', applyStyle('color: lightblue'), action)
     console.log('%cnext state', applyStyle('color: red'), store.getState())

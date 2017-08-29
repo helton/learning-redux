@@ -38,7 +38,7 @@ const connect = (mapStateToProps, mapDispatchToProps) =>
 
     getDispatchToProps(mapDispatchToProps) {
       const dispatchToProps = mapDispatchToProps || (dispatch => ({ dispatch }))
-      const dispatch = this.store.dispatch.bind(this.store)
+      const dispatch = this.store.dispatch
       if (typeof dispatchToProps === 'function')
         return dispatchToProps(dispatch, this.props)
       else

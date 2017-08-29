@@ -1,5 +1,6 @@
 import createStore from './createStore'
-import applyMiddleware from './applyMiddleware'
 import combineReducers from './combineReducers'
+import applyMiddleware from './applyMiddleware'
+import compose from './compose'
 
-export { createStore, applyMiddleware, combineReducers }
+export { createStore, combineReducers, applyMiddleware, compose }
