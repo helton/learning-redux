@@ -35,7 +35,7 @@ export const addTodo = text => dispatch =>
   )
 
 export const toggleTodo = id => dispatch =>
-  api.addTodo(id).then(response => 
+  api.toggleTodo(id).then(response => 
     dispatch({
       type: 'TOGGLE_TODO_SUCCESS',
       response: normalize(response, schema.todo)
