@@ -57,4 +57,3 @@ export const connect = (mapStateToProps, mapDispatchToProps) =>
       )
     }
   }
-
